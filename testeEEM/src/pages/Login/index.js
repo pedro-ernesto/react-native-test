@@ -48,7 +48,7 @@ export default function Login() {
         console.log('erro');
       } else {
         setLoading(false);
-        handleNavigate(res);
+        handleNavigate(res.data.conteudo);
       }
     });
   };

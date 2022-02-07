@@ -52,3 +52,28 @@ export const DivRow = styled.View`
   align-self: center;
   justify-content: center;
 `;
+
+export const SearchContainer = styled.View`
+  background:#D3D3D3;
+  width:100%;
+  align-items:center;
+  justify-content: center;
+`;
+
+export const SearchInputView = styled.View`
+  flex-direction: row;
+  align-items: center;
+  height: 35px;
+  border-radius: 7px;
+  padding: 0 15px;
+  background: #ffffff;
+  width: 90%;
+  margin: 10px;
+`;
+export const Info = styled.View`
+  flex:1;
+  margin-left: 10px;
+  padding-bottom: 15px;
+  border-bottom-width: 1px;
+  border-color: #D3D3D3
+`;

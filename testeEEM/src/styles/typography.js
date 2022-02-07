@@ -28,3 +28,17 @@ export const MobileLoginButtonText = styled.Text`
   color: white;
   text-align: center;
 `;
+
+export const ListTitle = styled.Text`
+
+  font-size: 20px;
+  color: #202121;
+  padding-left: 10px;
+`;
+
+export const ListSubtitle = styled.Text`
+  font-size: 11px;
+  color: #c0c0c0;
+  padding-top: 5px;
+  padding-left: 10px;
+`;

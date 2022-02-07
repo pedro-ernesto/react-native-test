@@ -12,3 +12,9 @@ export const PassInput = styled.TextInput.attrs({
 })`
 
 `;
+
+export const SearchInput = styled.TextInput.attrs({
+  placeholderTextColor: '#333333',
+})`
+ color: #000000;
+`;

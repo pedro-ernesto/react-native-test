@@ -29,3 +29,12 @@ export const MobileLoginButton = styled.TouchableHighlight`
   padding: 0 12px;
   width:100%;
 `;
+
+export const SmallListButton = styled.TouchableHighlight`
+  flex-direction:row;
+  width:100%;
+  align-self: center;
+  justify-content: center;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+`;
