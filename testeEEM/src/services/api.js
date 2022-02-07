@@ -5,5 +5,5 @@ export const apiLogin = axios.create({
 });
 
 export const apiMessages = axios.create({
-
+  baseURL: 'https://',
 });
