@@ -17,7 +17,7 @@ export default function Routes() {
           headerBackTitleVisible: false,
         }}
         >
-          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>
