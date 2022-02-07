@@ -59,7 +59,8 @@ export default function SchoolList() {
         renderItem={({ item }) => (
           <Buttons.SmallListButton onPress={() => handleNavigate(item)}>
             <>
-              <Images.SmallListImage resizeMode="contain" source={{ uri: item.urlLogoContexto }} />
+              {item.urlLogoContexto
+              && <Images.SmallListImage resizeMode="contain" source={{ uri: item.urlLogoContexto }} />}
               <Layout.Info>
                 <Typography.ListTitle>{item.nomeAplicacao}</Typography.ListTitle>
                 <Typography.ListSubtitle>{item.nomeCompleto}</Typography.ListSubtitle>

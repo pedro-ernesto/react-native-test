@@ -4,6 +4,7 @@ import React from 'react';
 
 import Login from './pages/Login';
 import SchoolList from './pages/SchoolList';
+import LoadingSchool from './pages/LoadingSchool';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function Routes() {
         >
           <Stack.Screen options={{ headerShown: false }} name="Login" component={Login} />
           <Stack.Screen options={{ title: 'Selecione a sessão principal' }} name="SchoolList" component={SchoolList} />
+          <Stack.Screen options={{ headerShown: false }} name="LoadingSchool" component={LoadingSchool} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

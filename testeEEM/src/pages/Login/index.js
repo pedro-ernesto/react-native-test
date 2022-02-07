@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   ActivityIndicator, StatusBar,
 } from 'react-native';
+import AsyncStorage from '@react-native-community/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 import { showMessage } from 'react-native-flash-message';
@@ -20,6 +21,15 @@ export default function Login() {
   const handleNavigate = (schools) => {
     navigation.navigate('SchoolList', { schools });
   };
+
+  useEffect(() => {
+    AsyncStorage.getItem('sessao').then((res) => {
+      if (res) {
+        handleNavigate(JSON.parse(res));
+      }
+    });
+  }, [handleNavigate, AsyncStorage]);
+
   console.log(user);
   console.log(password);
   const handleLogin = () => {
@@ -47,6 +57,7 @@ export default function Login() {
         });
         console.log('erro');
       } else {
+        AsyncStorage.setItem('sessao', JSON.stringify(res.data.conteudo));
         setLoading(false);
         handleNavigate(res.data.conteudo);
       }

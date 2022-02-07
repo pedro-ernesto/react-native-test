@@ -77,3 +77,11 @@ export const Info = styled.View`
   border-bottom-width: 1px;
   border-color: #D3D3D3
 `;
+
+export const CenteredContainer = styled.View`
+  flex:1;
+  align-items:center;
+  justify-content: center;
+  padding: 0 20px;
+  background: ${(props) => (props.backgroundColor)}
+`;

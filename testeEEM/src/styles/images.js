@@ -6,3 +6,10 @@ export const SmallListImage = styled.Image`
   aspect-ratio: 1;
   padding-bottom: 15px;
 `;
+export const BigImage = styled.Image`
+  width: 100%;
+  height: undefined;
+  aspect-ratio: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
