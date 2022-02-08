@@ -16,9 +16,7 @@ export default function LoadingSchool() {
   const handleNavigateError = () => {
     navigation.navigate('Login');
   };
-  console.log(school);
-  console.log(school.contexto);
-  console.log(school.token);
+
   useEffect(() => {
     axios({
       url: `https://${school.contexto}/api/mensagem/ultimas-noticias/v3`,
@@ -35,7 +33,6 @@ export default function LoadingSchool() {
       });
       handleNavigateError();
     }).then((res) => {
-      console.log(res);
       handleNavigate(res);
     });
   }, [handleNavigate, handleNavigateError, showMessage]);

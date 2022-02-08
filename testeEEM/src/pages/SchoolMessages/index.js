@@ -10,7 +10,7 @@ export default function SchoolMessages() {
   const route = useRoute();
 
   const { messages } = route.params;
-  console.log(messages);
+
   return (
     <>
       <Layout.DefaultContainer>

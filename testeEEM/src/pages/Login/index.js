@@ -20,8 +20,6 @@ export default function Login() {
   const handleNavigate = (schools) => {
     navigation.navigate('SchoolList', { schools });
   };
-  console.log(user);
-  console.log(password);
   const handleLogin = () => {
     setLoading(true);
     apiLogin.post('login', {
@@ -38,14 +36,12 @@ export default function Login() {
         type: 'danger',
       });
     }).then((res) => {
-      console.log(res);
       if (res.data.conteudo.length === 0) {
         setLoading(false);
         showMessage({
           message: 'Usuário não existe',
           type: 'danger',
         });
-        console.log('erro');
       } else {
         setLoading(false);
         handleNavigate(res.data.conteudo);

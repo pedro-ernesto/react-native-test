@@ -15,8 +15,6 @@ export default function SchoolList() {
 
   const { schools } = route.params;
 
-  console.log(schools[0].nomeCompleto);
-
   useEffect(() => {
     if (!search || search === '') {
       setFilteredData(schools);
@@ -24,11 +22,11 @@ export default function SchoolList() {
   }, [setFilteredData]);
   const handleSearch = (text) => {
     const formattedText = (text.toLowerCase()).replace(/ /g, '');
-    console.log(formattedText);
+
     const searchData = filter(schools, (school) => (
 
       ((school.nomeAplicacao.toLowerCase()).replace(/ /g, '')).indexOf(formattedText) > -1));
-    console.log(searchData);
+
     setFilteredData(searchData);
     setSearch(text);
   };
