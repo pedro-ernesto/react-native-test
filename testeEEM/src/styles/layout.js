@@ -85,3 +85,65 @@ export const CenteredContainer = styled.View`
   padding: 0 20px;
   background: ${(props) => (props.backgroundColor)}
 `;
+
+export const DefaultContainer = styled.View`
+  flex:1;
+  padding: 20px;
+  background: #ececec;
+`;
+export const BigListLayout = styled.View`
+  margin-bottom: 10px;
+  flex-direction: row;
+  align-items: center;
+`;
+export const InfoBigList = styled.View`
+  flex:1;
+  margin-left: 5px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+`;
+export const InfoSub = styled.View`
+  flex:1;
+  margin-left: 10px;
+  padding-bottom: 15px;
+`;
+export const shadow = StyleSheet.create({
+  header: {
+    alignItems: 'center',
+    borderWidth: 0,
+    padding: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    elevation: 1.5,
+    backgroundColor: '#0000',
+  },
+  list: {
+    paddingTop: 10,
+    marginBottom: 10,
+    paddingLeft: 3,
+    borderWidth: 0,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.5,
+    shadowRadius: 1,
+    elevation: 1.5,
+    backgroundColor: '#0000',
+  },
+});
+
+export const DivRowNavBar = styled.View`
+  flex-direction:row;
+  height: 50px;
+  background: #FFFFFF;
+  border-width: 0.5px;
+  border-color: #eee;
+  width:100%;
+  align-self: center;
+  justify-content: center;
+`;
+export const InfoNavBar = styled.View`
+  padding: 4px;
+  flex: 1;
+`;

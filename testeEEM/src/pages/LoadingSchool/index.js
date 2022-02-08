@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { showMessage } from 'react-native-flash-message';
-import { apiMessages } from '../../services/api';
+import axios from 'axios';
 import LoadingComponent from '../../components/loading';
 
 export default function LoadingSchool() {
@@ -14,16 +14,19 @@ export default function LoadingSchool() {
   };
 
   const handleNavigateError = () => {
-    navigation.navigate('SchoolList');
+    navigation.navigate('Login');
   };
   console.log(school);
   console.log(school.contexto);
   console.log(school.token);
   useEffect(() => {
-    apiMessages.post(`${school.contexto}/api/mensagem/ultimas-noticias/v3`, {}, {
+    axios({
+      url: `https://${school.contexto}/api/mensagem/ultimas-noticias/v3`,
+      method: 'post',
+      data: {},
       headers: {
-        'X-Auth-Token': school.token.toString(),
         'content-type': 'application/json',
+        'X-Auth-Token': school.token,
       },
     }).catch((err) => {
       showMessage({

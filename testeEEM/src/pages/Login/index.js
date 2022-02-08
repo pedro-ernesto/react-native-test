@@ -85,7 +85,7 @@ export default function Login() {
               placeholder="Usuário                                                                         "
               value={user}
               onChangeText={(text) => setUser(text)}
-              returnKeyType="send"
+              returnKeyType="next"
             />
           </Layout.InputViewUser>
           <Layout.InputViewPass>
